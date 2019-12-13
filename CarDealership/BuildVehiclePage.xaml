@@ -3,49 +3,213 @@
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-      xmlns:local="clr-namespace:CarDealership"
+      xmlns:local="clr-namespace:CarDealership" 
+      xmlns:i="clr-namespace:System.Windows.Interactivity;assembly=System.Windows.Interactivity"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="BuildVehiclePage">
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="50*" />
-            <ColumnDefinition Width="250*"/>
-            <ColumnDefinition Width="250*" />
-            <ColumnDefinition Width="250*" />
+            <ColumnDefinition Width="25*" />
+            <ColumnDefinition Width="97*"/>
+            <ColumnDefinition Width="27*"/>
+            <ColumnDefinition Width="126*"/>
+            <ColumnDefinition Width="125*" />
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="12*"/>
-            <RowDefinition Height="56*"/>
-            <RowDefinition Height="178*"/>
-            <RowDefinition Height="58*"/>
-
-            <RowDefinition Height="77*"/>
-            <RowDefinition Height="69*"/>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="65*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="43*"/>
+            <RowDefinition Height="256*"/>
+            <RowDefinition Height="47*"/>
         </Grid.RowDefinitions>
-        <ComboBox x:Name="comboBox" Margin="25,10,0,0" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Width="168" Height="22" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_Copy" Margin="42,10,0,0" Grid.Row="1" Grid.Column="2" HorizontalAlignment="Left" Width="168" Height="22" VerticalAlignment="Top"/>
-        <Image x:Name="image" Source="Resources\RS6.jpeg" Margin="10" Grid.Row="2" Grid.Column="1"/>
-        <ListBox x:Name="listBox" Grid.Column="3" Margin="10" Grid.Row="2" SelectionMode="Multiple" Grid.RowSpan="2">
-            <ListBoxItem Content="Опция1 (В наличии) Стоимость"/>
-            <ListBoxItem Content="Опция2 (Нет в наличии) Стоимость"/>
-        </ListBox>
-        <TextBox x:Name="textBox" Grid.Column="3" Margin="10,10,11,18" Grid.Row="4" TextWrapping="Wrap" Text="Итоговая стоимость"/>
-        <ComboBox x:Name="comboBox_Copy1" Margin="42,10,0,0" Grid.Row="2" Grid.Column="2" Height="22" VerticalAlignment="Top" HorizontalAlignment="Left" Width="168">
-            <ComboBoxItem Content="Цвет1 (В наличии)" HorizontalAlignment="Left" Width="166"/>
-            <ComboBoxItem Content="Цвет1 (Нет в наличии)" HorizontalAlignment="Left" Width="166"/>
-        </ComboBox>
-        <Button x:Name="button" Content="Перейти к договору" Grid.Column="3" Margin="10,10,11,10" Grid.Row="5"/>
-        <GroupBox x:Name="groupBox" Grid.Column="1" Header="Комплектация" Grid.Row="3" Grid.RowSpan="3" Margin="10">
-            <StackPanel Margin="5">
-                <RadioButton x:Name="radioButton" Content="Базовая" Height="20" Margin="0,15,0,0" />
-                <RadioButton x:Name="radioButton1" Content="Средняя" Height="20" Margin="0,25,0,0" />
-                <RadioButton x:Name="radioButton2" Content="Максимальная" Height="20" Margin="0,25,0,0" />
+        <Button x:Name="button" Content="Перейти к договору" Grid.Column="4" Margin="10,10,11,10" Grid.Row="5" BorderBrush="#FFABADB3"/>
+        <ComboBox x:Name="comboBox_Copy2" ItemsSource="{Binding Engines}" SelectedItem="{Binding SelectedEngine}" DisplayMemberPath="Name" Margin="10,10,0,0" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" Width="210" Height="23" VerticalAlignment="Top"/>
+        <ComboBox x:Name="comboBox_Copy3" ItemsSource="{Binding Colors}" SelectedItem="{Binding SelectedColor}" DisplayMemberPath="Name" Margin="10,10,0,0" Grid.Row="3" Grid.Column="4" HorizontalAlignment="Left" Width="210" Height="23" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Двигатель" Grid.Column="3" Margin="83,0,89,1" Grid.Row="2" RenderTransformOrigin="0.159,0.082" Height="28" VerticalAlignment="Bottom"/>
+        <Label x:Name="label_Copy1" Content="Цвет" RenderTransformOrigin="0.159,0.082" Grid.Column="4" Margin="94,0,106,1" Grid.Row="2" Height="28" VerticalAlignment="Bottom"/>
+        <GroupBox x:Name="groupBox" Grid.Column="2" Header="Модель" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,0,5,5" Foreground="#FFEEEEEE">
+            <StackPanel Orientation="Horizontal">
+                <ListBox x:Name="listBox2" ItemsSource="{Binding Brands}" SelectedItem="{Binding SelectedBrand}" Grid.Column="2" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Margin="5,0,5,1" Padding="10,0,0,0" Grid.Row="1" Width="285" SelectedIndex="0">
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding Path=Name}" FontSize="16" FontWeight="Medium" HorizontalAlignment="Center" Foreground="DarkRed" Margin="10,0" />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                <ComboBox x:Name="comboBox_Copy" ItemsSource="{Binding Models}" SelectedItem="{Binding SelectedModel}" DisplayMemberPath="Name" Margin="15,5,0,0" HorizontalAlignment="Left" Width="209" Height="23" VerticalAlignment="Top" SelectedIndex="0"/>
             </StackPanel>
         </GroupBox>
-       
-
-
+        <Image x:Name="image" Source="Resources\logo.jpg" Grid.Column="1" Grid.RowSpan="1" Grid.Row="1" Stretch="Fill"/>
+        <Image x:Name="bg" Grid.Column="2" Source="Resources\bg.jpg" Grid.Row="1" Grid.ColumnSpan="3" Panel.ZIndex="-1" Stretch="Fill" />
+        <ScrollViewer Grid.Column="3" Margin="10,0,0,0" Grid.Row="4" Grid.ColumnSpan="2" BorderBrush="Black">
+            <StackPanel Background="#FFACACAC">
+                <StackPanel>
+                    <Label Margin="1,1,1,0" Content="Фары" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Headlights}" SelectedItem="{Binding SelectedHeadlights}" Height="80">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}"/>
+                                    <TextBlock Text="    Стоимость: "/>
+                                    <TextBlock Text="{Binding Path=Price}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Margin="1,0,1,0" Content="Диски" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Wheels}" SelectedItem="{Binding SelectedWheels}" Height="80">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}" Width="200"/>
+                                    <TextBlock Text="{Binding Path=Price}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Margin="1,0,1,0" Content="Зеркала" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Mirrors}" SelectedItem="{Binding SelectedMirrors}" Height="80">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}" Width="200"/>
+                                    <TextBlock Text="{Binding Path=Price}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Margin="1,0,1,0" Content="Спойлер" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Wings}" SelectedItem="{Binding SelectedWing}" Height="80">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}" Width="200"/>
+                                    <TextBlock Text="{Binding Path=Price}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Margin="1,0,1,0" Content="Сидения" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Seats}" SelectedItem="{Binding SelectedSeat}" Height="80">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}" Width="200"/>
+                                    <TextBlock Text="{Binding Path=Price}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Margin="1,0,1,0" Content="Обивка сидений" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Upholsteries}" SelectedItem="{Binding SelectedUpholstery}" Height="80">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}" Width="200"/>
+                                    <TextBlock Text="{Binding Path=Price}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Margin="1,0,1,0" Content="Руль" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Steerings}" SelectedItem="{Binding SelectedSteering}" Height="80">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}" Width="200"/>
+                                    <TextBlock Text="{Binding Path=Price}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Margin="1,0,1,0" Content="Обогрев сидений" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Heatings}" SelectedItem="{Binding SelectedHeating}" Height="80">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}" Width="200"/>
+                                    <TextBlock Text="{Binding Path=Price}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Margin="1,0,1,0" Content="Пороги" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Sills}" SelectedItem="{Binding SelectedSills}" Height="80">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}" Width="200"/>
+                                    <TextBlock Text="{Binding Path=Price}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Margin="1,0,1,0" Content="Освещение салона" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Lightings}" SelectedItem="{Binding SelectedLighting}" Height="80">
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Path=Name}" Width="200"/>
+                                    <TextBlock Text="{Binding Path=Price}"/>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+                <StackPanel>
+                    <Label Margin="1,0,1,0" Content="Остальные опции" FontSize="15" BorderBrush="#FFABADB3" Background="#FFDADADA"/>
+                    <ListBox ItemsSource="{Binding Others}" SelectionMode="Multiple" Height="80">
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="{x:Type ListBoxItem}">
+                                <Setter Property="IsSelected" Value="{Binding Mode=TwoWay, Path=IsSelected}"/>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                        <i:Interaction.Triggers>
+                            <i:EventTrigger EventName="SelectionChanged">
+                                <i:InvokeCommandAction Command="{Binding SelectCommand}"/>
+                            </i:EventTrigger>
+                        </i:Interaction.Triggers>
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <UniformGrid Columns="2">
+                                    <TextBlock Text="{Binding Path=option.Name}" Width="200"/>
+                                    <!--<TextBlock Text="    Стоимость: "/>-->
+                                    <TextBlock Text="{Binding Path=option.Price}" />
+                                </UniformGrid>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+                    </ListBox>
+                </StackPanel>
+            </StackPanel>
+        </ScrollViewer>
+        <TextBox x:Name="textBox" Text="{Binding TotalPrice}" Grid.Column="1" Margin="146,10,219,0" Grid.Row="5" TextWrapping="Wrap" Grid.ColumnSpan="3" RenderTransformOrigin="0.325,0.481" Height="22" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Итоговая стоимость : " Grid.Column="1" Margin="10,6,48,10" Grid.Row="5"/>
+        <Image x:Name="image1" Source="{Binding VehicleImage}" Grid.Column="1" Margin="10,0,0,0" Grid.Row="4" Grid.ColumnSpan="2"/>
     </Grid>
 </Page>

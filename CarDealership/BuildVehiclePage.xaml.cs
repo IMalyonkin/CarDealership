@@ -23,6 +23,8 @@ namespace CarDealership
         public BuildVehiclePage()
         {
             InitializeComponent();
+
+            DataContext = new BuildVehicleVM();
         }
     }
 }

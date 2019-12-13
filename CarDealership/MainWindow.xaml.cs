@@ -27,10 +27,15 @@ namespace CarDealership
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Main.Content = new BuildVehiclePage();
+            Main.Content = new VehiclesInStockPage();
         }
 
         private void Button1_Click(object sender, RoutedEventArgs e)
+        {
+            Main.Content = new BuildVehiclePage();
+        }
+
+        private void Button2_Click(object sender, RoutedEventArgs e)
         {
             Main.Content = new StatisticPage();
         }

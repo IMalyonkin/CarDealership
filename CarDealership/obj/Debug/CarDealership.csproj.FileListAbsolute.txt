@@ -13,7 +13,160 @@ D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership
 D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.CoreCompileInputs.cache
 D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.exe
 D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.pdb
-D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.g.cs
 D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\StatisticPage.g.cs
-D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.baml
 D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\StatisticPage.baml
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\VehiclesInStockPage.g.cs
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\VehiclesInStockPage.baml
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.g.cs
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.baml
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.SqlServer.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.xml
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.SqlServer.xml
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.CopyComplete
+G:\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\CarDealership.exe.config
+G:\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\CarDealership.exe
+G:\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\CarDealership.pdb
+G:\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.dll
+G:\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.SqlServer.dll
+G:\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.xml
+G:\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.SqlServer.xml
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csprojAssemblyReference.cache
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.g.cs
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\VehiclesInStockPage.g.cs
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\MainWindow.g.cs
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\StatisticPage.g.cs
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\App.g.cs
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership_MarkupCompile.cache
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership_MarkupCompile.lref
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.baml
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\VehiclesInStockPage.baml
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\MainWindow.baml
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\StatisticPage.baml
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.g.resources
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.Properties.Resources.resources
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.GenerateResource.cache
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.CoreCompileInputs.cache
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.CopyComplete
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.exe
+G:\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.pdb
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\System.Windows.Interactivity.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\de\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\en\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\es\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\it\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\CarDealership\CarDealership\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\CarDealership.exe.config
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\CarDealership.exe
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\CarDealership.pdb
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.SqlServer.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.xml
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.SqlServer.xml
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\de\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\en\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\es\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\it\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csprojAssemblyReference.cache
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.g.cs
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\VehiclesInStockPage.g.cs
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\MainWindow.g.cs
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\StatisticPage.g.cs
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\App.g.cs
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership_MarkupCompile.cache
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership_MarkupCompile.lref
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.baml
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\VehiclesInStockPage.baml
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\MainWindow.baml
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\StatisticPage.baml
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.g.resources
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.Properties.Resources.resources
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.GenerateResource.cache
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.CoreCompileInputs.cache
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.CopyComplete
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.exe
+D:\Новая папка\Новая папка\Новая папка\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.pdb
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\CarDealership.exe.config
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\CarDealership.exe
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\CarDealership.pdb
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.SqlServer.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.xml
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\EntityFramework.SqlServer.xml
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\App.g.cs
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership_MarkupCompile.cache
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership_MarkupCompile.lref
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.g.resources
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.Properties.Resources.resources
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.GenerateResource.cache
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.CoreCompileInputs.cache
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.CopyComplete
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.exe
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.pdb
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.g.cs
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\VehiclesInStockPage.g.cs
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\MainWindow.g.cs
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\StatisticPage.g.cs
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.baml
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\VehiclesInStockPage.baml
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\MainWindow.baml
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\StatisticPage.baml
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\CarDealership.csprojAssemblyReference.cache
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\CarDealership.exe.config
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\CarDealership.exe
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\CarDealership.pdb
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\EntityFramework.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\EntityFramework.SqlServer.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\System.Windows.Interactivity.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\EntityFramework.xml
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\EntityFramework.SqlServer.xml
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\de\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\en\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\es\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\it\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\CarDealership.csprojAssemblyReference.cache
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.g.cs
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\VehiclesInStockPage.g.cs
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\MainWindow.g.cs
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\StatisticPage.g.cs
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\App.g.cs
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\CarDealership_MarkupCompile.cache
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\CarDealership_MarkupCompile.lref
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\BuildVehiclePage.baml
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\VehiclesInStockPage.baml
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\MainWindow.baml
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\StatisticPage.baml
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\CarDealership.g.resources
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\CarDealership.Properties.Resources.resources
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.GenerateResource.cache
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.CoreCompileInputs.cache
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\CarDealership.csproj.CopyComplete
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\CarDealership.exe
+D:\3 Курс\1\Фомина\Новая папка\CarDealership\CarDealership\obj\Debug\CarDealership.pdb
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\de\System.Windows.Interactivity.resources.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\en\System.Windows.Interactivity.resources.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\es\System.Windows.Interactivity.resources.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\fr\System.Windows.Interactivity.resources.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\it\System.Windows.Interactivity.resources.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\ja\System.Windows.Interactivity.resources.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\ko\System.Windows.Interactivity.resources.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\ru\System.Windows.Interactivity.resources.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\zh-Hans\System.Windows.Interactivity.resources.dll
+D:\Новая папка\1\Фомина\CarDealership\CarDealership\bin\Debug\zh-Hant\System.Windows.Interactivity.resources.dll

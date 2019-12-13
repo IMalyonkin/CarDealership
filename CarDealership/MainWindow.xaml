@@ -14,9 +14,10 @@
         <StackPanel x:Name="SideBar" RenderTransformOrigin="0.5,0.5" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
             <Button x:Name="button" Content="" Click="Button_Click" Height="50" VerticalAlignment="Bottom"/>
             <Button x:Name="button1" Content="" Click="Button1_Click" Height="50" VerticalAlignment="Top"/>
+            <Button x:Name="button2" Content="" Click="Button2_Click" Height="50" VerticalAlignment="Top"/>
         </StackPanel>
 
-        <Frame x:Name="Main" Source="BuildVehiclePage.xaml" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
+        <Frame x:Name="Main" Source="VehiclesInStockPage.xaml" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
 
     </Grid>
 </Window>
