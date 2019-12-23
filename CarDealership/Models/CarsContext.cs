@@ -97,6 +97,10 @@ namespace CarDealership.Models
                 .IsUnicode(false);
 
             modelBuilder.Entity<Employee>()
+                .Property(e => e.Role)
+                .IsUnicode(false);
+
+            modelBuilder.Entity<Employee>()
                 .HasMany(e => e.Contract)
                 .WithRequired(e => e.Employee)
                 .HasForeignKey(e => e.EmployeeFK)
@@ -146,9 +150,8 @@ namespace CarDealership.Models
 
             modelBuilder.Entity<Kit>()
                 .HasMany(e => e.Vehicle)
-                .WithRequired(e => e.Kit)
-                .HasForeignKey(e => e.KitFK)
-                .WillCascadeOnDelete(false);
+                .WithOptional(e => e.Kit)
+                .HasForeignKey(e => e.KitFK);
 
             modelBuilder.Entity<Model>()
                 .Property(e => e.Name)

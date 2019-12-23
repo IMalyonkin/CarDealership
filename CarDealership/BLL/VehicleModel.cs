@@ -11,6 +11,7 @@ namespace CarDealership.BLL
     public class VehicleModel
     {
         public Vehicle vehicle { get; set; }
+        public string model { get; set; }
         public byte[] image { get; set; }
         public string engineName { get; set; }
         public string engineType { get; set; }

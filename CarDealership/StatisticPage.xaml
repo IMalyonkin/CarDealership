@@ -10,15 +10,77 @@
 
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="17*"/>
-            <RowDefinition Height="73*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*"/>
-            <ColumnDefinition Width="371*"/>
+            <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <DataGrid x:Name="dataGrid" Margin="10" Grid.Row="1" Grid.Column="1"/>
-        <ComboBox x:Name="comboBox" Grid.Column="1" HorizontalAlignment="Left" Margin="10,31,0,0" VerticalAlignment="Top" Width="186"/>
+        <ListBox x:Name="listBox" ItemsSource="{Binding selectedContracts}" Margin="61,10,267,38">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <StackPanel Margin="5,0,15,0">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Модель: "/>
+                                <TextBlock Text="{Binding Path=model}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Комплектация: "/>
+                                <TextBlock Text="{Binding Path=kit}"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,15,0">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Покупатель: "/>
+                                <TextBlock Text="{Binding Path=client}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Продавец: "/>
+                                <TextBlock Text="{Binding Path=employee}"/>
+                            </StackPanel>
+                        </StackPanel>
+                        <StackPanel Margin="0,0,15,0">
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Дата: "/>
+                                <TextBlock Text="{Binding Path=date}"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal">
+                                <TextBlock Text="Стоимость: "/>
+                                <TextBlock Text="{Binding Path=contract.Total_Price}"/>
+                            </StackPanel>
+                        </StackPanel>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <GroupBox x:Name="groupBox" Header="Дата" HorizontalAlignment="Right" Width="247" Height="119" VerticalAlignment="Top" Margin="0,10,10,0">
+            <StackPanel VerticalAlignment="Center">
+                <StackPanel Orientation="Horizontal" Margin="20,20,0,20">
+                    <TextBlock Text="От: " VerticalAlignment="Center"/>
+                    <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding SelectedDate1}" VerticalAlignment="Top" Margin="10, 0" Width="100"/>
+                    <Button x:Name="button" Command="{Binding ClearDate1}" Content="X" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="24"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" Margin="20,0,0,20">
+                    <TextBlock Text="До: " VerticalAlignment="Center"/>
+                    <DatePicker HorizontalAlignment="Left" SelectedDate="{Binding SelectedDate2}" VerticalAlignment="Top" Margin="10, 0" Width="100"/>
+                    <Button x:Name="button1" Command="{Binding ClearDate2}" Content="X" FontSize="16" HorizontalAlignment="Left" VerticalAlignment="Top" Width="30" Height="24"/>
+                </StackPanel>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox1" Header="Модель" HorizontalAlignment="Right" Height="91" Margin="0,140,10,0" VerticalAlignment="Top" Width="247">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <ComboBox x:Name="comboBox_Copy" ItemsSource="{Binding Models}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedModel}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="24"/>
+                <Button x:Name="button_Copy" Command="{Binding ClearModel}" Content="X" FontSize="16" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="30" Height="24" Margin="10,0,0,0"/>
+            </StackPanel>
+        </GroupBox>
+        <GroupBox x:Name="groupBox1_Copy" Header="Продавец" HorizontalAlignment="Right" Height="82" Margin="0,245,10,0" VerticalAlignment="Top" Width="247">
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <ComboBox x:Name="comboBox_Copy1" ItemsSource="{Binding Employees}" DisplayMemberPath="Name" SelectedItem="{Binding SelectedEmployee}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="170" Height="24"/>
+                <Button x:Name="button_Copy1" Command="{Binding ClearEmployee}" Content="X" FontSize="16" Grid.Column="1" HorizontalAlignment="Left" Grid.Row="2" VerticalAlignment="Top" Width="30" Height="24" Margin="10,0,0,0"/>
+            </StackPanel>
+        </GroupBox>
+        <TextBox x:Name="textBox" Height="23" Margin="189,0,267,10" TextWrapping="Wrap" Text="{Binding Sum}" VerticalAlignment="Bottom" MaxHeight="23"/>
+        <Label x:Name="label" Content="Общая выручка" HorizontalAlignment="Left" Margin="61,0,0,10" VerticalAlignment="Bottom" Width="128"/>
 
     </Grid>
 </Page>

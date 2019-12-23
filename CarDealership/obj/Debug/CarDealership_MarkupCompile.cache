@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Новая папка\1\Фомина\CarDealership\CarDealership\obj\Debug\
+F:\CarDealership\CarDealership\obj\Debug\
 CarDealership
 none
 false
 DEBUG;TRACE
-D:\Новая папка\1\Фомина\CarDealership\CarDealership\App.xaml
-41920798026
+F:\CarDealership\CarDealership\App.xaml
+71250809720
 
-31411162823
-201602525843
-BuildVehiclePage.xaml;VehiclesInStockPage.xaml;MainWindow.xaml;StatisticPage.xaml;
+40-1156343668
+20-136384222
+AdminWindow.xaml;BuildVehiclePage.xaml;ContractPage.xaml;logInWindow.xaml;VehiclesInStockPage.xaml;MainWindow.xaml;StatisticPage.xaml;
 
 False
 

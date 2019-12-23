@@ -12,61 +12,55 @@
 
     <Grid>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="25*" />
-            <ColumnDefinition Width="97*"/>
-            <ColumnDefinition Width="28*"/>
-            <ColumnDefinition Width="125*" />
-            <ColumnDefinition Width="125*" />
+            <ColumnDefinition Width="49*" />
+            <ColumnDefinition Width="111*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="0*"/>
-            <RowDefinition Height="65*"/>
-            <RowDefinition Height="39*"/>
-            <RowDefinition Height="43*"/>
-            <RowDefinition Height="256*"/>
-            <RowDefinition Height="47*"/>
+            <RowDefinition/>
         </Grid.RowDefinitions>
-        <Button x:Name="button" Content="Перейти к договору" Grid.Column="4" Margin="10,10,11,10" Grid.Row="5" BorderBrush="#FFABADB3"/>
-        <ListBox x:Name="listBox1" ItemsSource="{Binding Vehicles}" SelectedItem="{Binding SelectedVehicle}" Grid.ColumnSpan="4" Grid.Column="1" Margin="10,10,10,0" Grid.Row="4">
+        <Button x:Name="button" Command="{Binding Contract}" Content="Перейти к договору" Margin="0,0,5,10" Grid.Row="1" BorderBrush="#FFABADB3" MaxWidth="270" MaxHeight="40" HorizontalAlignment="Right" Width="235" Height="27" VerticalAlignment="Bottom" Grid.Column="1"/>
+        <ListBox x:Name="listBox1" ItemsSource="{Binding Vehicles}" SelectedItem="{Binding SelectedVehicle}" Margin="60,157,5,47" Grid.Row="1" Grid.ColumnSpan="2">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <StackPanel Orientation="Horizontal">
                         <Image Source="{Binding Path=image}" Width="200" Margin="5,0,0,5" />
                         <StackPanel Margin="10,0,0,0">
                             <TextBlock Text="{Binding SelectedItem.Name, ElementName=comboBox_Copy}" FontSize="16" />
-                            <StackPanel Orientation="Horizontal">
-                                <TextBlock Text="123" Margin="0,0,10,0" />
-                                <TextBlock Text="{Binding Path=engineName}" />
+                            <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                <Image Source="Resources\engine.png" Margin="0,0,10,0" VerticalAlignment="Center" />
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Path=engineName}" />
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Path=engineType}" Margin="0,0,10,0" />
+                                        <TextBlock Text="{Binding Path=enginePower}" />
+                                        <TextBlock Text=" л. с."/>
+                                    </StackPanel>
+                                </StackPanel>
                             </StackPanel>
-                            <TextBlock Text="{Binding Path=engineType}" />
-                            <TextBlock Text="{Binding Path=totalPrice}" />
+                            <StackPanel Orientation="Horizontal" Margin="0,15,0,0">
+                                <TextBlock Text="Стоимость: "/>
+                                <TextBlock Text="{Binding Path=totalPrice}" />
+                                <TextBlock Text=" руб"/>
+                            </StackPanel>
                         </StackPanel>
-                        <StackPanel Margin="10,0,0,0">
+                        <StackPanel Margin="20,0,0,0">
                             <TextBlock Text="Комплектация"/>
-                            <Expander Header="{Binding Path=kit}" Height="180">
-                                <ListBox ItemsSource="{Binding options}" DisplayMemberPath="Name"/>
+                            <Expander Header="{Binding Path=kit}" Height="180" Margin="0,10,0,0">
+                                <ListBox ItemsSource="{Binding options}" Width="300" DisplayMemberPath="Name"/>
                             </Expander>
                         </StackPanel>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ComboBox x:Name="comboBox_Copy1" ItemsSource="{Binding Kits}" SelectedItem="{Binding SelectedKit}" Margin="10,10,0,0" Grid.Row="3" Grid.Column="1" HorizontalAlignment="Left" Width="202" Height="23" VerticalAlignment="Top" Grid.ColumnSpan="2">
-            <ComboBox.ItemTemplate>
-                <DataTemplate>
-                    <StackPanel Orientation="Horizontal">
-                        <TextBlock Text="{Binding Path=Name}" />
-                        <TextBlock Text="{Binding Path=Price}" Margin="5,0,0,0" />
-                    </StackPanel>
-                </DataTemplate>
-            </ComboBox.ItemTemplate>
-        </ComboBox>
-        <ComboBox x:Name="comboBox_Copy2" ItemsSource="{Binding Engines}" SelectedItem="{Binding SelectedEngine}" DisplayMemberPath="Name" Margin="10,10,0,0" Grid.Row="3" Grid.Column="3" HorizontalAlignment="Left" Width="202" Height="23" VerticalAlignment="Top"/>
-        <ComboBox x:Name="comboBox_Copy3" ItemsSource="{Binding Colors}" SelectedItem="{Binding SelectedColor}" DisplayMemberPath="Name" Margin="10,10,0,0" Grid.Row="3" Grid.Column="4" HorizontalAlignment="Left" Width="202" Height="23" VerticalAlignment="Top" BorderBrush="#FFACACAC"/>
-        <Label x:Name="label" Content="Комплектация" Grid.Column="1" Margin="78,0,24,1" Grid.Row="2" RenderTransformOrigin="0.159,0.082" Height="28" VerticalAlignment="Bottom"/>
-        <Label x:Name="label_Copy" Content="Двигатель" Grid.Column="3" Margin="88,0,82,1" Grid.Row="2" RenderTransformOrigin="0.159,0.082" Height="28" VerticalAlignment="Bottom"/>
-        <Label x:Name="label_Copy1" Content="Цвет" RenderTransformOrigin="0.159,0.082" Grid.Column="4" Margin="106,0,94,1" Grid.Row="2" Height="28" VerticalAlignment="Bottom"/>
-        <GroupBox x:Name="groupBox" Grid.Column="2" Header="Модель" Grid.Row="1" Grid.ColumnSpan="3" Margin="0,0,5,5" Foreground="#FFEEEEEE">
+        <ComboBox x:Name="comboBox_Copy1" ItemsSource="{Binding Kits}" SelectedItem="{Binding SelectedKit}" DisplayMemberPath="Name" Margin="60,114,0,0" Grid.Row="1" HorizontalAlignment="Left" Width="202" Height="23" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <ComboBox x:Name="comboBox_Copy2" ItemsSource="{Binding Engines}" SelectedItem="{Binding SelectedEngine}" DisplayMemberPath="Name" Margin="315,114,285,0" Grid.Row="1" Height="23" VerticalAlignment="Top" MaxWidth="202" Grid.ColumnSpan="2" Grid.Column="0"/>
+        <ComboBox x:Name="comboBox_Copy3" ItemsSource="{Binding Colors}" SelectedItem="{Binding SelectedColor}" DisplayMemberPath="Name" Margin="0,114,38,0" Grid.Row="1" HorizontalAlignment="Right" Width="202" BorderBrush="#FFACACAC" Height="23" VerticalAlignment="Top" Grid.Column="1"/>
+        <Label x:Name="label" Content="Комплектация" Margin="128,75,24,0" Grid.Row="1" RenderTransformOrigin="0.159,0.082" Height="28" VerticalAlignment="Top"/>
+        <Label x:Name="label_Copy" Content="Двигатель" Margin="380,75,335,0" Grid.Row="1" RenderTransformOrigin="0.159,0.082" Height="28" VerticalAlignment="Top" HorizontalAlignment="Center" Grid.ColumnSpan="2" Grid.Column="0" Width="67"/>
+        <Label x:Name="label_Copy1" Content="Цвет" RenderTransformOrigin="0.159,0.082" Margin="0,75,94,0" Grid.Row="1" Height="28" VerticalAlignment="Top" HorizontalAlignment="Right" Width="50" MaxWidth="50" Grid.Column="1"/>
+        <GroupBox x:Name="groupBox" Header="Модель" Grid.Row="1" Margin="0,0,5,0" Foreground="#FFEEEEEE" Height="60" VerticalAlignment="Top" Grid.Column="1">
             <StackPanel Orientation="Horizontal">
                 <ListBox x:Name="listBox2" ItemsSource="{Binding Brands}" SelectedItem="{Binding SelectedBrand}" Grid.Column="2" Grid.ColumnSpan="2" Background="{x:Null}" BorderBrush="{x:Null}" Margin="5,0,5,1" Padding="10,0,0,0" Grid.Row="1" Width="285" SelectedIndex="0">
                     <ListBox.ItemsPanel>
@@ -80,13 +74,13 @@
                         </DataTemplate>
                     </ListBox.ItemTemplate>
                 </ListBox>
-                <ComboBox x:Name="comboBox_Copy" ItemsSource="{Binding Models}" SelectedItem="{Binding SelectedModel}" DisplayMemberPath="Name" Margin="15,5,0,0" HorizontalAlignment="Left" Width="209" Height="23" VerticalAlignment="Top" SelectedIndex="0"/>
+                <ComboBox x:Name="comboBox_Copy" ItemsSource="{Binding Models}" SelectedItem="{Binding SelectedModel}" DisplayMemberPath="Name" Margin="15,5,0,0" HorizontalAlignment="Left" Width="209" Height="23" VerticalAlignment="Top"/>
             </StackPanel>
         </GroupBox>
-        <Image x:Name="image" Source="Resources\logo.jpg" Grid.Column="1" Grid.RowSpan="1" Grid.Row="1" Stretch="Fill"/>
-        <Image x:Name="bg" Grid.Column="2" Source="Resources\bg.jpg" Grid.Row="1" Grid.ColumnSpan="3" Panel.ZIndex="-1" Stretch="Fill" />
-        <Button Content="X" Grid.Column="1" Command="{Binding ClearKits}" Grid.ColumnSpan="2" FontSize="15" Margin="218,10,0,0" Grid.Row="3" VerticalAlignment="Top" Height="23" RenderTransformOrigin="1.478,0.391" HorizontalAlignment="Left" Width="23" BorderBrush="#FFACACAC"/>
-        <Button Content="X" Grid.Column="3" Command="{Binding ClearEngines}" FontSize="15" HorizontalAlignment="Left" Margin="217,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="23" Height="23" RenderTransformOrigin="1.761,0.457" BorderBrush="#FFACACAC"/>
-        <Button Content="X" Grid.Column="4" Command="{Binding ClearColors}" FontSize="15" HorizontalAlignment="Left" Margin="217,10,0,0" Grid.Row="3" VerticalAlignment="Top" Width="23" Height="23" RenderTransformOrigin="3.283,0.652" BorderBrush="#FFACACAC"/>
+        <Image x:Name="image" Source="Resources\logo.jpg" Grid.RowSpan="1" Grid.Column="0" Grid.Row="1" Stretch="Fill" Margin="50,0,0,0" Height="65" VerticalAlignment="Top" />
+        <Image x:Name="bg" Source="Resources\bg.jpg" Grid.Row="1" Panel.ZIndex="-1" Stretch="Fill" Height="65" VerticalAlignment="Top" Grid.Column="1" />
+        <Button Content="X" Command="{Binding ClearKits}" FontSize="15" Margin="270,114,0,0" Grid.ColumnSpan="2" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top" Height="23" RenderTransformOrigin="1.478,0.391" HorizontalAlignment="Left" Width="23" BorderBrush="#FFACACAC" />
+        <Button Content="X" Command="{Binding ClearEngines}" FontSize="15" Margin="520,114,257,0" Grid.Row="1" VerticalAlignment="Top" Height="23" Width="23" BorderBrush="#FFACACAC" MaxWidth="23" Grid.ColumnSpan="2" Grid.Column="0" RenderTransformOrigin="1.029,0.51"/>
+        <Button Content="X" Command="{Binding ClearColors}" FontSize="15" Margin="0,114,10,0" Grid.Row="1" RenderTransformOrigin="3.283,0.652" BorderBrush="#FFACACAC" Height="23" VerticalAlignment="Top" HorizontalAlignment="Right" Width="23" Grid.Column="1"/>
     </Grid>
 </Page>

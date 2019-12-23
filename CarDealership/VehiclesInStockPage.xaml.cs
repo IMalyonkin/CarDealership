@@ -20,11 +20,11 @@ namespace CarDealership
     /// </summary>
     public partial class VehiclesInStockPage : Page
     {
-        public VehiclesInStockPage()
+        public VehiclesInStockPage(Frame main, MainWindow window)
         {
             InitializeComponent();
 
-            DataContext = new AppViewModel();
+            DataContext = new AppViewModel(main, window, this);
         }
     }
 }

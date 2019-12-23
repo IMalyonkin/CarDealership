@@ -5,19 +5,72 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CarDealership"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="CarDealership" Height="500" Width="900">
+    <Window.Resources>
+        <Style x:Key="TransparentStyle" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border>
+                            <Border.Style>
+                                <Style TargetType="{x:Type Border}">
+                                    <Style.Triggers>
+                                        <Trigger Property="IsMouseOver" Value="True">
+                                            <Setter Property="Background">
+                                                <Setter.Value>
+                                                    <SolidColorBrush Color="#FFB93C3C" Opacity="0.5"/>
+                                                </Setter.Value>
+                                            </Setter>
+                                        </Trigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Border.Style>
+                            <Grid Background="Transparent">
+                                <ContentPresenter></ContentPresenter>
+                            </Grid>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
     <Grid Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
             <ColumnDefinition Width="371*"/>
         </Grid.ColumnDefinitions>
-        <StackPanel x:Name="SideBar" RenderTransformOrigin="0.5,0.5" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
-            <Button x:Name="button" Content="" Click="Button_Click" Height="50" VerticalAlignment="Bottom"/>
-            <Button x:Name="button1" Content="" Click="Button1_Click" Height="50" VerticalAlignment="Top"/>
-            <Button x:Name="button2" Content="" Click="Button2_Click" Height="50" VerticalAlignment="Top"/>
+        <StackPanel x:Name="SideBar" RenderTransformOrigin="0.5,0.5" Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}" HorizontalAlignment="Left" Width="50" Panel.ZIndex="1" Grid.ColumnSpan="2">
+            <Button x:Name="button0" Style="{StaticResource TransparentStyle}" Height="50" Width="50" HorizontalAlignment="Left" Click="Button0_Click">
+                <Image Source="Resources/menu.png" Width="30"/>
+            </Button>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                <Button x:Name="button3" Style="{StaticResource TransparentStyle}" Height="50" Width="50" Click="Button3_Click">
+                    <Image Source="Resources/logOut.png" Width="35"/>
+                </Button>
+                <TextBlock Text="Выйти" VerticalAlignment="Center" FontSize="14" Margin="10,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                <Button x:Name="button" Style="{StaticResource TransparentStyle}" Height="50" Width="50" Click="Button_Click">
+                    <Image Source="Resources/inStock.png" Width="35"/>
+                </Button>
+                <TextBlock Text="Автомобили в наличии" VerticalAlignment="Center" FontSize="14" Margin="10,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                <Button x:Name="button1" Style="{StaticResource TransparentStyle}" Click="Button1_Click" Height="50" Width="50">
+                    <Image Source="Resources/config.png" Width="35"/>
+                </Button>
+                <TextBlock Text="Конфигуратор" VerticalAlignment="Center" FontSize="14" Margin="10,0,0,0" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom">
+                <Button x:Name="button2" Style="{StaticResource TransparentStyle}" Click="Button2_Click" Height="50" Width="50">
+                    <Image Source="Resources/stat.png" Width="35"/>
+                </Button>
+                <TextBlock Text="Статистика" VerticalAlignment="Center" FontSize="14" Margin="10,0,0,0" />
+            </StackPanel>
         </StackPanel>
 
-        <Frame x:Name="Main" Source="VehiclesInStockPage.xaml" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2"/>
+        <Frame x:Name="Main" NavigationUIVisibility="Hidden" Grid.ColumnSpan="2" Panel.ZIndex="-1"/>
 
     </Grid>
 </Window>

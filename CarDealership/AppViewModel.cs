@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Windows.Controls;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,8 @@ namespace CarDealership
 {
     public class AppViewModel : INotifyPropertyChanged
     {
+        MainWindow window;
+        Frame main;
         private CarsContext db;
 
         private Brand selectedBrand;
@@ -31,7 +34,6 @@ namespace CarDealership
         public ObservableCollection<Models.Color> Colors { get; set; }
         public ObservableCollection<VehicleModel> allVehicles { get; set; }
         public ObservableCollection<VehicleModel> Vehicles { get; set; }
-        public ObservableCollection<Option> Options { get; set; }
 
         public Brand SelectedBrand
         {
@@ -42,8 +44,8 @@ namespace CarDealership
                 OnPropertyChanged("SelectedBrand");
 
                 Models.Clear();
-                selectedModel = null;
                 selectedBrand.Model.ToList().ForEach(i => Models.Add(i));
+                SelectedModel = Models.First();
             }
         }
 
@@ -143,13 +145,6 @@ namespace CarDealership
             {
                 selectedVehicle = value;
                 OnPropertyChanged("SelectedVehicle");
-
-                Options.Clear();
-                //SelectedVehicle.vehicle.
-                //    .Where(i => i.KitFK == selectedKit.Id)
-                //    .Join(db.Option, ko => ko.OptionFK, o => o.Id, (ko, o) => o)
-                //    .Select(i => new Option() { Name = i.Name, Price = i.Price })
-                //    .ToList().ForEach(i => Options.Add(i));
             }
         }
 
@@ -253,18 +248,35 @@ namespace CarDealership
             return (Convert.ToInt32(p1) + Convert.ToInt32(p2) + Convert.ToInt32(p3) + Convert.ToInt32(p4)).ToString();
         }
 
-        public AppViewModel()
+        private RelayCommand contract;
+        public RelayCommand Contract
         {
+            get
+            {
+                return contract ??
+                  (contract = new RelayCommand(obj =>
+                  {
+                      main.Content = new ContractPage();
+                      window.hideSideBar();
+                  }));
+            }
+        }
+
+        public AppViewModel(Frame main, MainWindow window)
+        {
+            this.window = window;
+            this.main = main;
             db = new CarsContext();
 
-            Brands = new ObservableCollection<Brand>(db.Brand.ToList());
-            Models = new ObservableCollection<Model>();
-            Kits = new ObservableCollection<Kit>();
+            Kits = new ObservableCollection<Kit>(db.Kit.ToList());
             Engines = new ObservableCollection<Engine>();
-            Colors = new ObservableCollection<Models.Color>();
+            Colors = new ObservableCollection<Models.Color>(db.Color.ToList());
             Vehicles = new ObservableCollection<VehicleModel>();
             allVehicles = new ObservableCollection<VehicleModel>();
-            Options = new ObservableCollection<Option>();
+            Models = new ObservableCollection<Model>(db.Model.ToList());
+            Brands = new ObservableCollection<Brand>(db.Brand.ToList());
+            SelectedBrand = Brands.First();
+            SelectedModel = Models.First();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

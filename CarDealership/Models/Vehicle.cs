@@ -25,7 +25,7 @@ namespace CarDealership.Models
 
         public int StatusFK { get; set; }
 
-        public int KitFK { get; set; }
+        public int? KitFK { get; set; }
 
         public int ColorFK { get; set; }
 

@@ -20,11 +20,11 @@ namespace CarDealership
     /// </summary>
     public partial class BuildVehiclePage : Page
     {
-        public BuildVehiclePage()
+        public BuildVehiclePage(Frame main, MainWindow window)
         {
             InitializeComponent();
 
-            DataContext = new BuildVehicleVM();
+            DataContext = new BuildVehicleVM(main, window, this);
         }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Windows.Controls;
 using System.Drawing;
+using System.Windows;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,6 +17,7 @@ namespace CarDealership
 {
     public class BuildVehicleVM : INotifyPropertyChanged
     {
+        Frame main;
         private CarsContext db;
 
         private VehicleModel Vehicle;
@@ -65,8 +68,8 @@ namespace CarDealership
                 OnPropertyChanged("SelectedBrand");
 
                 Models.Clear();
-                selectedModel = null;
                 selectedBrand.Model.ToList().ForEach(i => Models.Add(i));
+                SelectedModel = Models.First();
 
                 calcTotalPrice();
             }
@@ -163,28 +166,6 @@ namespace CarDealership
                 VehicleImage = SelectedModel.Model_Color.ToList().Select(i => i.Image).FirstOrDefault();
 
                 calcTotalPrice();
-
-                //allVehicles.Clear();
-                //SelectedModel.Kit.ToList()
-                //    .Join(db.Vehicle, k => k.Id, v => v.KitFK, (k, v) => v)
-                //    .Where(i => i.StatusFK == 1)
-                //    .Select(i => new VehicleModel()
-                //    {
-                //        vehicle = new Vehicle() { EngineFK = i.EngineFK, StatusFK = i.StatusFK, KitFK = i.KitFK, ColorFK = i.ColorFK },
-                //        engineName = i.Engine.Name,
-                //        engineType = i.Engine.Type,
-                //        enginePower = i.Engine.Power,
-                //        kit = i.Kit.Name,
-                //        color = i.Color.Name,
-                //        image = SelectedModel.Model_Color.ToList()
-                //                .Where(j => j.ColorFK == i.ColorFK)
-                //                .Select(j => j.Image)
-                //                .FirstOrDefault(),
-                //        totalPrice = calcTotalPrice(i)
-                //    })
-                //    .ToList().ForEach(i => allVehicles.Add(i));
-
-                //allVehicles.ToList().ForEach(i => Vehicles.Add(i));
             }
         }
 
@@ -425,15 +406,27 @@ namespace CarDealership
             TotalPrice = price.ToString();
         }
 
-        public BuildVehicleVM()
+        private RelayCommand contract;
+        public RelayCommand Contract
         {
+            get
+            {
+                return contract ??
+                  (contract = new RelayCommand(obj =>
+                  {
+                      main.Content = new ContractPage();
+                  }));
+            }
+        }
+
+        public BuildVehicleVM(Frame main)
+        {
+            this.main = main;
             db = new CarsContext();
 
-            Brands = new ObservableCollection<Brand>(db.Brand.ToList());
-            Models = new ObservableCollection<Model>();
-            Engines = new ObservableCollection<Engine>();
-            Colors = new ObservableCollection<Models.Color>();
-            Headlights = new ObservableCollection<Option>();
+            Engines = new ObservableCollection<Engine>(db.Engine.ToList());
+            Colors = new ObservableCollection<Models.Color>(db.Color.ToList());
+            Headlights = new ObservableCollection<Option>(db.Option.ToList());
             Wheels = new ObservableCollection<Option>();
             Mirrors = new ObservableCollection<Option>();
             Wings = new ObservableCollection<Option>();
@@ -444,6 +437,10 @@ namespace CarDealership
             Sills = new ObservableCollection<Option>();
             Lightings = new ObservableCollection<Option>();
             Others = new ObservableCollection<OptionModel>();
+            Models = new ObservableCollection<Model>(db.Model.ToList());
+            Brands = new ObservableCollection<Brand>(db.Brand.ToList());
+            SelectedBrand = Brands.First();
+            SelectedModel = Models.First();
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
